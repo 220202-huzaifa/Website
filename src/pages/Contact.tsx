@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import ChatBot from '../components/ChatBot';
+import emailjs from 'emailjs-com';
+
+// Initialize EmailJS
+emailjs.init("3tA8mN5VrsUhOU4sQ");
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -25,46 +29,68 @@ function Contact() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    try {
-      // Direct email client approach - always works
-      const subject = encodeURIComponent(`New Contact Form Submission from ${formData.name}`);
-      const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-Company: ${formData.company}
-Phone: ${formData.phone}
-Service: ${formData.service}
+    // EmailJS configuration - REPLACE WITH YOUR ACTUAL CREDENTIALS
+    const serviceID = 'service_figj3lp';
+    const adminTemplateID = 'template_7aj29ys'; // Template for admin notification
+    const userTemplateID = 'template_rq6ltzc'; // Template for user confirmation
+    const userID = '3tA8mN5VrsUhOU4sQ';
 
-Message:
-${formData.message}
-      `);
-      
-      window.location.href = `mailto:zhuzaifa011@gmail.com?subject=${subject}&body=${body}`;
-      
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+    // Prepare template parameters for admin email (with all form details)
+    const adminTemplateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+      service: formData.service,
+      message: formData.message
+    };
+
+    // Prepare template parameters for user confirmation email
+    const userTemplateParams = {
+      name: formData.name,
+      to_email: formData.email,
+      title: formData.service || 'General Inquiry',
+      company: formData.company
+    };
+
+    console.log('Sending admin email with params:', adminTemplateParams);
+    console.log('Sending user confirmation with params:', userTemplateParams);
+
+    // Send email to admin with form details
+    const adminEmail = emailjs.send(serviceID, adminTemplateID, adminTemplateParams);
+    
+    // Send confirmation email to user
+    const userEmail = emailjs.send(serviceID, userTemplateID, userTemplateParams);
+
+    // Wait for both emails to be sent
+    Promise.all([adminEmail, userEmail])
+      .then(([adminResponse, userResponse]) => {
+        console.log('Admin email sent successfully!', adminResponse.status, adminResponse.text);
+        console.log('User confirmation email sent successfully!', userResponse.status, userResponse.text);
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+        setTimeout(() => {
+          setSubmitStatus('idle');
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        console.error('Error details:', error.text, error.status);
+        setSubmitStatus('error');
+        setTimeout(() => {
+          setSubmitStatus('idle');
+        }, 5000);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-      
-      // Show success message
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
-      
-    } catch (error) {
-      console.error('Error:', error);
-      setSubmitStatus('error');
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   return (

@@ -14,7 +14,9 @@ To enable email sending from the contact form to `zhuzaifa011@gmail.com`, follow
 4. Connect your email account (the one that will send emails)
 5. Note down your **Service ID**
 
-## Step 3: Create an Email Template
+## Step 3: Create Email Templates
+
+### Template 1: Admin Notification (for receiving form details)
 1. Go to "Email Templates" in EmailJS dashboard
 2. Click "Create New Template"
 3. Use this template structure:
@@ -40,7 +42,26 @@ This message was sent from your TechSoft website.
 Reply to: {{from_email}}
 ```
 
-4. Save the template and note down your **Template ID**
+4. Set the "To Email" field to: `zhuzaifa011@gmail.com`
+5. Save the template and note down your **Template ID** (this will be `template_7aj29ys`)
+
+### Template 2: User Confirmation Email
+1. Create another new template
+2. Use this template structure:
+
+```
+Subject: Thank you for contacting TechSoft!
+
+Hi {{to_name}},
+
+Thank you for reaching out to us! We've received your request regarding "{{service_requested}}" and will get back to you within 24 hours.
+
+Best regards,
+The TechSoft Team
+```
+
+3. Set the "To Email" field to: `{{to_email}}`
+4. Save the template and note down your **Template ID** (this will be `template_user_confirmation`)
 
 ## Step 4: Get Your User ID
 1. Go to "Account" in EmailJS dashboard
