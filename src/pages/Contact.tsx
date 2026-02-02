@@ -276,8 +276,8 @@ function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                    <p className="text-gray-600">hello@techsoft.com</p>
-                    <p className="text-gray-600">support@techsoft.com</p>
+                    <p className="text-gray-600">hello@diskodifysolutions.com</p>
+                    <p className="text-gray-600">support@diskodifysolutions.com</p>
                   </div>
                 </div>
 

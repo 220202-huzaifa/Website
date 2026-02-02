@@ -38,7 +38,7 @@ Message:
 {{message}}
 
 ---
-This message was sent from your TechSoft website.
+This message was sent from your Diskodify Solutions website.
 Reply to: {{from_email}}
 ```
 
@@ -50,14 +50,14 @@ Reply to: {{from_email}}
 2. Use this template structure:
 
 ```
-Subject: Thank you for contacting TechSoft!
+Subject: Thank you for contacting Diskodify Solutions!
 
 Hi {{to_name}},
 
 Thank you for reaching out to us! We've received your request regarding "{{service_requested}}" and will get back to you within 24 hours.
 
 Best regards,
-The TechSoft Team
+The Diskodify Solutions Team
 ```
 
 3. Set the "To Email" field to: `{{to_email}}`

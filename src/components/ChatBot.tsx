@@ -12,7 +12,7 @@ function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! Welcome to TechSoft. How can I help you today?',
+      text: 'Hello! Welcome to Diskodify Solutions. How can I help you today?',
       sender: 'bot',
       timestamp: new Date()
     }
@@ -47,7 +47,7 @@ function ChatBot() {
     } else if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('quote')) {
       return 'Pricing varies based on project complexity and requirements. I can connect you with our team for a detailed quote. Would you like me to arrange a consultation?';
     } else if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('phone')) {
-      return 'You can reach us at hello@techsoft.com or call +1 (555) 123-4567. You can also fill out the contact form on this page for a quick response!';
+      return 'You can reach us at hello@diskodifysolutions.com or call +1 (555) 123-4567. You can also fill out the contact form on this page for a quick response!';
     } else if (lowerMessage.includes('time') || lowerMessage.includes('duration') || lowerMessage.includes('long')) {
       return 'Project timelines vary depending on complexity. A simple website might take 2-4 weeks, while complex applications can take 3-6 months. What type of project are you considering?';
     } else if (lowerMessage.includes('thank') || lowerMessage.includes('thanks')) {
@@ -118,7 +118,7 @@ function ChatBot() {
         <div className="flex items-center">
           <div className="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></div>
           <div>
-            <h3 className="font-semibold">TechSoft Support</h3>
+            <h3 className="font-semibold">Diskodify Solutions Support</h3>
             <p className="text-xs text-orange-100">Online - Typically replies instantly</p>
           </div>
         </div>

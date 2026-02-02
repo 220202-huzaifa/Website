@@ -33,14 +33,14 @@ function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="mailto:hello@techsoft.com" className="hover:text-white transition-colors">hello@techsoft.com</a></li>
+              <li><a href="mailto:hello@diskodifysolutions.com" className="hover:text-white transition-colors">hello@diskodifysolutions.com</a></li>
               <li>+1 (555) 123-4567</li>
               <li>San Francisco, CA</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>&copy; 2024 TechSoft. All rights reserved.</p>
+          <p>&copy; 2024 Diskodify Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

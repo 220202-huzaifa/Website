@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import VantaGlobe from '../components/VantaGlobe';
 
 function Home() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -15,13 +16,14 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-orange-50 via-white to-blue-50">
-        <div className="container-professional text-center">
-          <h1 className="hero-heading mb-8">
+      <section className="section-padding relative overflow-hidden">
+        <VantaGlobe />
+        <div className="container-professional text-center relative z-10">
+          <h1 className="hero-heading mb-8 mt-4 text-white">
             Skyrocket the growth of your
             <span className="text-gradient"> software product</span>
           </h1>
-          <p className="hero-subheading mb-12 max-w-4xl mx-auto">
+          <p className="hero-subheading mb-12 max-w-4xl mx-auto text-gray-100">
             Define, build and scale compliant software solutions with our expert development team.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

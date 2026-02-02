@@ -18,7 +18,7 @@ function Header() {
       <div className="container-professional py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-gray-900 hover:text-orange-500 transition-colors">
-            <span className="text-orange-500">Tech</span>Soft
+            <span className="text-orange-500">Diskodify</span> Solutions
           </Link>
           
           {/* Desktop Navigation */}
