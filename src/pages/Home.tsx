@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import VantaGlobe from '../components/VantaGlobe';
+import TypingAnimation from '../components/TypingAnimation';
 
 function Home() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -13,6 +14,14 @@ function Home() {
     setHoveredCard(null);
   };
 
+  const rotatingWords = [
+    'software product',
+    'digital business',
+    'online platform',
+    'tech startup',
+    'SaaS application'
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -20,8 +29,16 @@ function Home() {
         <VantaGlobe />
         <div className="container-professional text-center relative z-10">
           <h1 className="hero-heading mb-8 mt-4 text-white">
-            Skyrocket the growth of your
-            <span className="text-gradient"> software product</span>
+            Skyrocket the growth of your <br />
+            <span className="text-gradient"> 
+              <TypingAnimation 
+                words={rotatingWords}
+                typingSpeed={100}
+                deletingSpeed={50}
+                pauseDuration={800}
+                className="text-gradient"
+              />
+            </span>
           </h1>
           <p className="hero-subheading mb-12 max-w-4xl mx-auto text-gray-100">
             Define, build and scale compliant software solutions with our expert development team.
@@ -188,6 +205,114 @@ function Home() {
               className="btn-primary px-8 py-4 text-lg shadow-professional-lg"
             >
               View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Works Section */}
+      <section className="section-padding bg-white">
+        <div className="container-professional">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Recent Works</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Explore our portfolio of successful projects that have helped businesses transform their digital presence and achieve remarkable growth.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'E-Commerce Platform',
+                category: 'Shopify Development',
+                image: '🛒',
+                description: 'Custom Shopify store with advanced inventory management and seamless payment integration.',
+                tags: ['Shopify', 'React', 'Node.js'],
+                link: '/portfolio'
+              },
+              {
+                title: 'Healthcare Management System',
+                category: 'Management System',
+                image: '🏥',
+                description: 'Comprehensive healthcare management system with patient records and appointment scheduling.',
+                tags: ['React', 'Python', 'PostgreSQL'],
+                link: '/portfolio'
+              },
+              {
+                title: 'FinTech Mobile App',
+                category: 'Mobile Development',
+                image: '📱',
+                description: 'Secure mobile banking application with real-time transactions and biometric authentication.',
+                tags: ['React Native', 'Firebase', 'Security'],
+                link: '/portfolio'
+              },
+              {
+                title: 'CRM Dashboard',
+                category: 'CRM Development',
+                image: '🤝',
+                description: 'Advanced CRM system with analytics, sales pipeline management, and automation features.',
+                tags: ['Vue.js', 'Node.js', 'MongoDB'],
+                link: '/portfolio'
+              },
+              {
+                title: 'IoT Monitoring Platform',
+                category: 'Web Development',
+                image: '🌐',
+                description: 'Real-time IoT device monitoring platform with data visualization and alert system.',
+                tags: ['React', 'WebSocket', 'D3.js'],
+                link: '/portfolio'
+              },
+              {
+                title: 'SaaS Analytics Tool',
+                category: 'SaaS Development',
+                image: '📊',
+                description: 'Cloud-based analytics platform with custom reporting and business intelligence features.',
+                tags: ['Angular', 'Python', 'AWS'],
+                link: '/portfolio'
+              }
+            ].map((project, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="card-professional h-full overflow-hidden hover:shadow-professional-lg transition-all duration-300">
+                  <div className="p-8">
+                    <div className="text-5xl mb-4 text-center">{project.image}</div>
+                    <div className="text-xs text-orange-500 font-semibold uppercase tracking-wider mb-2 text-center">
+                      {project.category}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{project.title}</h3>
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed text-center">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 justify-center mb-4">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span 
+                          key={tagIndex} 
+                          className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="text-center">
+                      <Link 
+                        to={project.link}
+                        className="text-orange-500 font-medium text-sm group-hover:text-orange-600 transition-colors inline-flex items-center"
+                      >
+                        View Case Study
+                        <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-16">
+            <Link 
+              to="/portfolio"
+              className="btn-primary px-8 py-4 text-lg shadow-professional-lg"
+            >
+              View All Projects
             </Link>
           </div>
         </div>

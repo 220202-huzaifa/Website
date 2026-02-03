@@ -2,18 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS for flip card animations */
-.preserve-3d {
-  transform-style: preserve-3d;
-}
+/* Animation keyframes removed - only Vanta Globe animation retained */
 
-.backface-hidden {
-  backface-visibility: hidden;
-}
+/* Animation utility classes removed - only Vanta Globe animation retained */
 
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
+/* Staggered animations removed */
+
+/* Hover animations removed */
+
+/* Loading animations removed */
+
+/* Scroll animations removed */
+
+/* Flip card animations removed */
 
 /* Line clamp utility */
 .line-clamp-1 {
