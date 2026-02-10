@@ -223,51 +223,43 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'E-Commerce Platform',
-                category: 'Shopify Development',
+                title: 'Vera Luxe',
+                category: 'Shopify',
                 image: '🛒',
-                description: 'Custom Shopify store with advanced inventory management and seamless payment integration.',
-                tags: ['Shopify', 'React', 'Node.js'],
+                description: 'Premium skincare and makeup e-commerce platform.',
+                tags: ['Shopify', 'E-commerce', 'Beauty Products'],
                 link: '/portfolio'
               },
               {
-                title: 'Healthcare Management System',
-                category: 'Management System',
-                image: '🏥',
-                description: 'Comprehensive healthcare management system with patient records and appointment scheduling.',
-                tags: ['React', 'Python', 'PostgreSQL'],
-                link: '/portfolio'
-              },
-              {
-                title: 'FinTech Mobile App',
-                category: 'Mobile Development',
-                image: '📱',
-                description: 'Secure mobile banking application with real-time transactions and biometric authentication.',
-                tags: ['React Native', 'Firebase', 'Security'],
+                title: 'National Hotel Association',
+                category: 'Management Systems',
+                image: '🏛️',
+                description: 'Pakistan first registered and recognized hostellers association with National Hostel Registration.',
+                tags: ['Association Management', 'Hostel Registration'],
                 link: '/portfolio'
               },
               {
                 title: 'CRM Dashboard',
-                category: 'CRM Development',
+                category: 'Management Systems',
                 image: '🤝',
                 description: 'Advanced CRM system with analytics, sales pipeline management, and automation features.',
-                tags: ['Vue.js', 'Node.js', 'MongoDB'],
+                tags: ['CRM', 'Analytics', 'Automation'],
                 link: '/portfolio'
               },
               {
-                title: 'IoT Monitoring Platform',
+                title: 'Battery Expert',
                 category: 'Web Development',
-                image: '🌐',
-                description: 'Real-time IoT device monitoring platform with data visualization and alert system.',
-                tags: ['React', 'WebSocket', 'D3.js'],
+                image: '🔋',
+                description: 'Company website for battery specialists with nationwide distribution of VRLA and LIPO batteries.',
+                tags: ['Company Website', 'Battery Distribution'],
                 link: '/portfolio'
               },
               {
-                title: 'SaaS Analytics Tool',
-                category: 'SaaS Development',
-                image: '📊',
-                description: 'Cloud-based analytics platform with custom reporting and business intelligence features.',
-                tags: ['Angular', 'Python', 'AWS'],
+                title: 'Digital Rozgar',
+                category: 'Web Development',
+                image: '💰',
+                description: 'Online earning platform.',
+                tags: ['Web Platform', 'Online Earning'],
                 link: '/portfolio'
               }
             ].map((project, index) => (
@@ -295,7 +287,7 @@ function Home() {
                         to={project.link}
                         className="text-orange-500 font-medium text-sm group-hover:text-orange-600 transition-colors inline-flex items-center"
                       >
-                        View Case Study
+                        Visit Page
                         <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>

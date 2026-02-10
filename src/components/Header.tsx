@@ -38,7 +38,7 @@ function Header() {
             {[
               { path: '/', label: 'Home', delay: 0 },
               { path: '/services', label: 'Services', delay: 100 },
-              { path: '/portfolio', label: 'Portfolio', delay: 200 },
+              { path: '/portfolio', label: 'Our Work', delay: 200 },
               { path: '/blog', label: 'Blog', delay: 300 },
               { path: '/contact', label: 'Contact', delay: 400 }
             ].map((item, index) => (
@@ -81,7 +81,7 @@ function Header() {
               {[
                 { path: '/', label: 'Home' },
                 { path: '/services', label: 'Services' },
-                { path: '/portfolio', label: 'Portfolio' },
+                { path: '/portfolio', label: 'Our Work' },
                 { path: '/blog', label: 'Blog' },
                 { path: '/contact', label: 'Contact' }
               ].map((item, index) => (
