@@ -299,7 +299,7 @@ function Contact() {
                     <h3 className="font-semibold text-gray-900 mb-2">Office</h3>
                     <p className="text-gray-600">
                       123 Tech Street<br />
-                      San Francisco, CA 94105<br />
+                     LAhore, CA 94105<br />
                       United States
                     </p>
                   </div>
