@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 function Blog() {
   const blogPosts = [
@@ -68,6 +69,13 @@ function Blog() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Blog | Diskodify Solutions</title>
+        <meta
+          name="description"
+          content="Read insights from Diskodify Solutions on web development, mobile apps, UX design, product strategy, AI, and software security."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-orange-50 via-white to-blue-50">
         <div className="container mx-auto text-center">

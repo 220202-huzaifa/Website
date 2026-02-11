@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 function Services() {
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
@@ -75,6 +76,13 @@ function Services() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Services | Diskodify Solutions</title>
+        <meta
+          name="description"
+          content="Explore Diskodify Solutions services including web app development, mobile apps, Shopify stores, CRM systems, UI/UX design, QA, and technology consulting."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-orange-50 via-white to-blue-50">
         <div className="container mx-auto text-center max-w-4xl">

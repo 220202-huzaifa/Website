@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import ChatBot from '../components/ChatBot';
 import emailjs from 'emailjs-com';
 
@@ -94,6 +95,13 @@ function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Contact | Diskodify Solutions</title>
+        <meta
+          name="description"
+          content="Contact Diskodify Solutions to discuss your next web or mobile app project, CRM system, or custom software solution."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-orange-50 via-white to-blue-50">
         <div className="container mx-auto text-center">

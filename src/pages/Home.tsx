@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import VantaGlobe from '../components/VantaGlobe';
 import TypingAnimation from '../components/TypingAnimation';
 
@@ -24,6 +25,13 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Diskodify Solutions | Premium Software Development Agency</title>
+        <meta
+          name="description"
+          content="Diskodify Solutions helps startups and enterprises build custom web apps, mobile apps, and digital products that scale."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden">
         <VantaGlobe />
