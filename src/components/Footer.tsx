@@ -38,7 +38,7 @@ function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="mailto:hello@diskodifysolutions.com" className="hover:text-white transition-colors block">hello@diskodifysolutions.com</a></li>
               <li className="hover:text-white transition-colors">+1 (555) 123-4567</li>
-              <li className="hover:text-white transition-colors">San Francisco, CA</li>
+              <li className="hover:text-white transition-colors">Lahore</li>
             </ul>
           </div>
         </div>
