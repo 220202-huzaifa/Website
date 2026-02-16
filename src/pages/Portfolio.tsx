@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 function Portfolio() {
+  const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -65,6 +67,14 @@ function Portfolio() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <link rel="canonical" href={`https://diskodifysolutions.com${location.pathname}`} />
+        <title>Our Work | Diskodify Solutions</title>
+        <meta
+          name="description"
+          content="Explore our portfolio of successful projects including Shopify stores, management systems, web development, and custom software solutions."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-orange-50 via-white to-blue-50">
         <div className="container mx-auto text-center max-w-4xl">

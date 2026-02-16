@@ -1,7 +1,9 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 function Blog() {
+  const location = useLocation();
   const blogPosts = [
     {
       id: 1,
@@ -70,6 +72,7 @@ function Blog() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
+        <link rel="canonical" href={`https://diskodifysolutions.com${location.pathname}`} />
         <title>Blog | Diskodify Solutions</title>
         <meta
           name="description"

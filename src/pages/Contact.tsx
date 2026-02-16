@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import ChatBot from '../components/ChatBot';
 import emailjs from 'emailjs-com';
@@ -7,6 +8,7 @@ import emailjs from 'emailjs-com';
 emailjs.init("3tA8mN5VrsUhOU4sQ");
 
 function Contact() {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -96,6 +98,7 @@ function Contact() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
+        <link rel="canonical" href={`https://diskodifysolutions.com${location.pathname}`} />
         <title>Contact | Diskodify Solutions</title>
         <meta
           name="description"

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import VantaGlobe from '../components/VantaGlobe';
 import TypingAnimation from '../components/TypingAnimation';
 
 function Home() {
+  const location = useLocation();
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const handleCardHover = (index: number) => {
@@ -26,6 +27,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
+        <link rel="canonical" href={`https://diskodifysolutions.com${location.pathname}`} />
         <title>Diskodify Solutions | Premium Software Development Agency</title>
         <meta
           name="description"

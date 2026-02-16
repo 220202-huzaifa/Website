@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 function Services() {
+  const location = useLocation();
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
 
   const handleCardClick = (index: number) => {
@@ -77,6 +79,7 @@ function Services() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
+        <link rel="canonical" href={`https://diskodifysolutions.com${location.pathname}`} />
         <title>Services | Diskodify Solutions</title>
         <meta
           name="description"
