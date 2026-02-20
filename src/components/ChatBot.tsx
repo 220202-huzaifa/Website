@@ -47,7 +47,7 @@ function ChatBot() {
     } else if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('quote')) {
       return 'Pricing varies based on project complexity and requirements. I can connect you with our team for a detailed quote. Would you like me to arrange a consultation?';
     } else if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('phone')) {
-      return 'You can reach us at hello@diskodifysolutions.com or call +1 (555) 123-4567. You can also fill out the contact form on this page for a quick response!';
+      return 'You can reach us at info@diskodifysolutions.com or call +92 316 0149142. You can also fill out the contact form on this page for a quick response!';
     } else if (lowerMessage.includes('time') || lowerMessage.includes('duration') || lowerMessage.includes('long')) {
       return 'Project timelines vary depending on complexity. A simple website might take 2-4 weeks, while complex applications can take 3-6 months. What type of project are you considering?';
     } else if (lowerMessage.includes('thank') || lowerMessage.includes('thanks')) {

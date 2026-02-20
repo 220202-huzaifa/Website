@@ -184,7 +184,7 @@ function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+92 316 0149142"
                     />
                   </div>
                 </div>
@@ -286,8 +286,8 @@ function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                    <p className="text-gray-600">hello@diskodifysolutions.com</p>
-                    <p className="text-gray-600">support@diskodifysolutions.com</p>
+                    <p className="text-gray-600">info@diskodifysolutions.com</p>
+                   
                   </div>
                 </div>
 
@@ -297,7 +297,7 @@ function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+92 316 0149142</p>
                     <p className="text-gray-600">Mon-Fri 9AM-6PM PST</p>
                   </div>
                 </div>

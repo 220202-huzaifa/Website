@@ -36,8 +36,8 @@ function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="mailto:hello@diskodifysolutions.com" className="hover:text-white transition-colors block">hello@diskodifysolutions.com</a></li>
-              <li className="hover:text-white transition-colors">+1 (555) 123-4567</li>
+              <li><a href="mailto:info@diskodifysolutions.com" className="hover:text-white transition-colors block">info@diskodifysolutions.com</a></li>
+              <li className="hover:text-white transition-colors">+92 316 0149142</li>
               <li className="hover:text-white transition-colors">Lahore</li>
             </ul>
           </div>
