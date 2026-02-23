@@ -1,9 +1,29 @@
-Options -MultiViews
+# Enable rewrite engine
 RewriteEngine On
+
+# Handle static assets - don't rewrite if file exists
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Ensure static files are served correctly
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js|css|png|jpg|jpeg|gif|ico|svg)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+</IfModule>
+
+# Handle React Router - redirect all non-file requests to index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
+RewriteRule . /index.html [L]
 
-# Handle static assets
-RewriteCond %{REQUEST_URI} ^/static/
-RewriteRule ^ - [L]
+# Set default MIME types if needed
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+</IfModule>
+
+# Handle common issues
+Options -MultiViews
+DirectoryIndex index.html
