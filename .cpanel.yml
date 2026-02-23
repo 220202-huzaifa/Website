@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/diskimrg/public_html/
     - /bin/rm -rf $DEPLOYPATH/*
     - /bin/cp -R build/* $DEPLOYPATH
+    - /bin/cp -R build/static $DEPLOYPATH/static

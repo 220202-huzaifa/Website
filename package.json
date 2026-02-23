@@ -2,7 +2,7 @@
   "name": "react-tailwind-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://diskodifysolutions.com",
+  "homepage": ".",
   "dependencies": {
     "@types/node": "^18.15.0",
     "@types/react": "^18.0.28",
