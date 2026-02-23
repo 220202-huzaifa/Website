@@ -3,4 +3,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/diskimrg/public_html/
     - /bin/rm -rf $DEPLOYPATH/*
-    - /bin/cp -a build/* $DEPLOYPATH/
+    - /bin/mkdir -p $DEPLOYPATH/static/js
+    - /bin/mkdir -p $DEPLOYPATH/static/css
+    - /bin/cp build/* $DEPLOYPATH/
+    - /bin/cp build/static/js/* $DEPLOYPATH/static/js/
+    - /bin/cp build/static/css/* $DEPLOYPATH/static/css/
