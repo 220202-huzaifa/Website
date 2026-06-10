@@ -89,9 +89,9 @@ const VantaGlobe: React.FC<VantaGlobeProps> = ({ className = "" }) => {
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-backgroundColor: 0xefe8db,
+backgroundColor: 0x0b1220,
 color: 0xf97316,
-color2: 0x0f172a,
+color2: 0x38bdf8,
           size: 1
         });
       } catch (error) {

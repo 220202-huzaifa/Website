@@ -25,34 +25,66 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="section-padding relative overflow-hidden">
-        <VantaGlobe />
-        <div className="container-professional text-center relative z-10">
-          <h1 className="hero-heading mb-8 mt-4 text-white">
-            Skyrocket the growth of your <br />
-            <span className="text-gradient"> 
-              <TypingAnimation 
-                words={rotatingWords}
-                typingSpeed={100}
-                deletingSpeed={50}
-                pauseDuration={800}
-                className="text-gradient"
-              />
-            </span>
-          </h1>
-          <p className="hero-subheading mb-12 max-w-4xl mx-auto text-gray-100">
-            Define, build and scale compliant software solutions with our expert development team.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
-              to="/contact"
-              className="btn-primary px-8 py-4 text-lg shadow-professional-lg"
-            >
-              Get a Quote
-            </Link>
-            <button className="btn-secondary px-8 py-4 text-lg">
-              View Portfolio
-            </button>
+      <section className="hero-section relative overflow-hidden">
+        <div className="hero-glow" aria-hidden="true" />
+        <div className="container-professional relative z-10 py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+            {/* Left: content */}
+            <div className="text-center lg:text-left">
+              <span className="hero-badge">
+                <span className="hero-badge-dot" />
+                Full-cycle software development
+              </span>
+              <h1 className="hero-heading mt-6 mb-6 text-white">
+                Skyrocket the growth of your <br className="hidden sm:block" />
+                <span className="text-gradient">
+                  <TypingAnimation
+                    words={rotatingWords}
+                    typingSpeed={100}
+                    deletingSpeed={50}
+                    pauseDuration={800}
+                    className="text-gradient"
+                  />
+                </span>
+              </h1>
+              <p className="hero-subheading mb-10 max-w-xl mx-auto lg:mx-0 text-gray-300">
+                Define, build and scale compliant software solutions with our expert development team.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link
+                  to="/contact"
+                  className="btn-primary px-8 py-4 text-lg shadow-professional-lg"
+                >
+                  Get a Quote
+                </Link>
+                <Link
+                  to="/portfolio"
+                  className="btn-hero-secondary px-8 py-4 text-lg"
+                >
+                  View Portfolio
+                </Link>
+              </div>
+
+              {/* Trust stats */}
+              <div className="hero-stats">
+                {[
+                  { value: '50+', label: 'Projects delivered' },
+                  { value: '30+', label: 'Happy clients' },
+                  { value: '5+', label: 'Years of experience' }
+                ].map((stat, index) => (
+                  <div key={index} className="hero-stat">
+                    <div className="hero-stat-value">{stat.value}</div>
+                    <div className="hero-stat-label">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: animated globe */}
+            <div className="hero-visual hidden lg:block">
+              <div className="hero-visual-ring" aria-hidden="true" />
+              <VantaGlobe />
+            </div>
           </div>
         </div>
       </section>
